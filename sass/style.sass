@@ -1,0 +1,103 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+$primary: #2eb3db
+
+body
+    font-family: poppins
+    background-color: #f0f0f0
+
+    .container
+        width: 1100px
+        max-width: 90%
+        margin: 0 auto
+
+    nav.navbar
+        background: white
+        height: 10vh
+
+        .container
+            display: flex
+            align-items: center
+            height: 100%
+
+            .logo
+                font-size: 2rem
+                font-weight: 800
+            a
+                color: black
+                text-decoration: none
+                display: flex
+                align-items: center
+                color: $primary
+
+    main
+        height: 85vh
+        .container
+            height: 100%
+            background: url(/img/bg.jpg) center center/cover
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            padding: 0 1rem
+            color: white
+
+        button
+            padding: 0.8rem 1.5rem
+            border-radius: 6px
+            outline: none
+            border: none
+            background-color: $primary
+            color: white
+            font-weight: 600
+            margin-top: 20px
+            cursor: pointer
+            transition: all 0.2s ease-in-out
+
+            &:hover
+                background-color: darken($primary, 10%)
+
+        p
+            font-size: 2rem
+            width: 500px
+            text-align: center
+
+    footer
+        height: 5vh
+        
+        .container
+            height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+
+        a
+            text-decoration: none
+            color: darken($primary, 10%)
+
+@media screen and (max-width:600px )
+    nav.navbar
+        .container
+            justify-content: center
+    .logo
+        img
+            height: 2rem
+
+    main
+        .container
+            p
+                font-size: 1.2rem
+                width: 80%
+
+@media screen and (max-width:470px )
+    .logo
+        a
+            font-size: 1.3rem
+
+@media screen and (max-width:315px )
+    .logo
+        a
+            font-size: 1.2rem
